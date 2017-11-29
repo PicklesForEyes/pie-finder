@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>Pie Quiz</title>
+
+  <!-- BootStrap 3.3.7 -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- jQuery 3.2.1 -->
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Pie Quiz!</h1>
+    <hr>
+    <form id="pie-quiz">
+      <br>
+      <h3>Question 1:</h3>
+      <label for="answer1">I am in the mood for pizza.</label>
+      <br>
+      <select id="answer1">
+        <option data-value="1">1 (disagree)</option>
+        <option data-value="2">2</option>
+        <option data-value="3">3</option>
+        <option data-value="4">4</option>
+        <option data-value="5">5 (agree)</option>
+      </select>
+
+      <br>
+      <h3>Question 2:</h3>
+      <label for="answer2">I am in the mood for fruit.</label>
+      <br>
+      <select id="answer2">
+        <option data-value="1">1 (disagree)</option>
+        <option data-value="2">2</option>
+        <option data-value="3">3</option>
+        <option data-value="4">4</option>
+        <option data-value="5">5 (agree)</option>
+      </select>
+
+      <br>
+      <h3>Question 3:</h3>
+      <label for="answer3">I like the idea of savory.</label>
+      <br>
+      <select id="answer3">
+        <option data-value="1">1 (disagree)</option>
+        <option data-value="2">2</option>
+        <option data-value="3">3</option>
+        <option data-value="4">4</option>
+        <option data-value="5">5 (agree)</option>
+      </select>
+
+      <br>
+      <h3>Question 4:</h3>
+      <label for="answer4">I want something that's not standard.</label>
+      <br>
+      <select id="answer4">
+        <option data-value="1">1 (disagree)</option>
+        <option data-value="2">2</option>
+        <option data-value="3">3</option>
+        <option data-value="4">4</option>
+        <option data-value="5">5 (agree)</option>
+      </select>
+
+      <br>
+      <h3>Question 5:</h3>
+      <label for="answer5">I like the color orange.</label>
+      <br>
+      <select id="answer5">
+        <option data-value="1">1 (disagree)</option>
+        <option data-value="2">2</option>
+        <option data-value="3">3</option>
+        <option data-value="4">4</option>
+        <option data-value="5">5 (agree)</option>
+      </select>
+
+      <br>
+      <h3>Question 6:</h3>
+      <label for="answer6">I want something tangy.</label>
+      <br>
+      <select id="answer6">
+        <option data-value="1">1 (disagree)</option>
+        <option data-value="2">2</option>
+        <option data-value="3">3</option>
+        <option data-value="4">4</option>
+        <option data-value="5">5 (agree)</option>
+      </select>
+
+      <br>
+      <h3>Question 7:</h3>
+      <label for="answer8">I love chocolate.</label>
+      <br>
+      <select id="answer8">
+        <option data-value="1">1 (disagree)</option>
+        <option data-value="2">2</option>
+        <option data-value="3">3</option>
+        <option data-value="4">4</option>
+        <option data-value="5">5 (agree)</option>
+      </select>
+
+      <br>
+      <h3>Question 8:</h3>
+      <label for="answer8">I don't like nuts.</label>
+      <br>
+      <select id="answer8">
+        <option data-value="1">1 (disagree)</option>
+        <option data-value="2">2</option>
+        <option data-value="3">3</option>
+        <option data-value="4">4</option>
+        <option data-value="5">5 (agree)</option>
+      </select>
+
+      <br>
+      <h3>Question 9:</h3>
+      <label for="answer9">I don't want desert.</label>
+      <br>
+      <select id="answer9">
+        <option data-value="1">1 (disagree)</option>
+        <option data-value="2">2</option>
+        <option data-value="3">3</option>
+        <option data-value="4">4</option>
+        <option data-value="5">5 (agree)</option>
+      </select>
+
+      <br>
+      <h3>Question 10:</h3>
+      <label for="answer10">This quiz was fun!</label>
+      <br>
+      <select id="answer10">
+        <option>1 (disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (agree)</option>
+      </select>
+
+      <button class="btn btn-success" id="submit">Submit</button>
+    </form>
+
+    <form id="missing-pie">
+      <h3>Think we're missing a pie? <small>Add yours here!</small></h3>
+      <label for="pieName">Type of Pie:</label>
+        <input type="text" name="pieName" id="pie-name" />
+      <label for="pieImage">Link to an image:</label>
+        <input type="text" name="pieImage" id="pie-image" />
+      <button type="submit" class="btn btn-primary" id="add-pie">Submit</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(() => {
+
+      $('#submit').on('click', (e) => {
+        e.preventDefault();
+
+        for(var i = 0; i < 9; i++) {
+          console.log($('#answer' + i).data('value'))
+        }
+      })
+
+    })
+  </script>
+</body>
+</html>
